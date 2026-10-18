@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeri Pelat — Lumen</title>
+  <meta name="description" content="Galeri 20 pelat fenomena cahaya alam lengkap dengan deskripsi ilmiahnya.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d1118'/%3E%3Crect x='6' y='6' width='20' height='5' fill='%23f0b429'/%3E%3Crect x='6' y='14' width='20' height='3' fill='%236fc7d4'/%3E%3Crect x='6' y='20' width='20' height='2' fill='%23d97a9e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&family=Public+Sans:wght@300;400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- DUNIA: Pelat Spektrum (seed 4a66d831). Lihat komentar kontrak di index.html. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, , and every shipping raster carrying its provenance -->
+  <header class="nav" id="nav"></header>
+
+  <main>
+    <div class="page-head container">
+      <h1>Galeri</h1>
+      <p class="section-lead">
+        Dua puluh foto, dikelompokkan menurut proses fisik yang melahirkannya.
+        Klik foto untuk deskripsi lengkap, dan klik love menyimpannya ke dashboard Anda.
+      </p>
+      <div class="filter-row" id="filters" role="group" aria-label="Saring kategori">
+        <button type="button" class="filter-btn active" data-kat="semua" aria-pressed="true">Semua</button>
+        <button type="button" class="filter-btn" data-kat="posisi-matahari" aria-pressed="false">Posisi Matahari</button>
+        <button type="button" class="filter-btn" data-kat="pembiasan-cahaya" aria-pressed="false">Pembiasan Cahaya</button>
+        <button type="button" class="filter-btn" data-kat="optik-atmosfer" aria-pressed="false">Optik & Atmosfer</button>
+        <button type="button" class="filter-btn" data-kat="cahaya-langit" aria-pressed="false">Cahaya Langit Ekstrem</button>
+        <button type="button" class="filter-btn" data-kat="efek-awan" aria-pressed="false">Efek Awan & Partikel</button>
+        <button type="button" class="filter-btn" data-kat="cuaca-musiman" aria-pressed="false">Cuaca & Musiman</button>
+        <button type="button" class="filter-btn" data-kat="lanskap-eksotis" aria-pressed="false">Lanskap Eksotis</button>
+      </div>
+    </div>
+
+    <section class="section" style="padding-top:2rem">
+      <div class="container">
+        <div class="grid-plates" id="grid">
+          <article class="plate reveal" data-foto="golden-hour" data-kat="posisi-matahari" data-judul="Golden Hour" data-warna="#f0b429" tabindex="0" role="button" aria-label="Buka pelat 01 — Golden Hour">
+            <div class="plate-media"><img src="images/momen-berdasarkan-posisi-matahari/golden-hour.avif" alt="Golden Hour" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Golden Hour" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#f0b429"></div>
+            <div class="plate-cap">
+              <h3>Golden Hour</h3>
+            </div>
+            <p class="plate-kat">Posisi Matahari · Jam emas ketika matahari rendah dan cahaya menjadi hangat serta lembut.</p>
+            <p class="plate-panjang" hidden>Golden hour adalah kurang lebih satu jam setelah matahari terbit dan sebelum matahari terbenam, ketika sang surya berada rendah di cakrawala. Cahaya harus menempuh jarak lebih panjang melalui atmosfer, sehingga cahaya biru tersaring dan yang tersisa adalah nuansa kuning–jingga yang hangat. Fotografer menyukainya karena bayangan menjadi panjang dan lembut, serta kulit dan lanskap terlihat bercahaya.</p>
+          </article>
+          <article class="plate reveal" data-foto="blue-hour" data-kat="posisi-matahari" data-judul="Blue Hour" data-warna="#f0b429" tabindex="0" role="button" aria-label="Buka pelat 02 — Blue Hour">
+            <div class="plate-media"><img src="images/momen-berdasarkan-posisi-matahari/blue-hour.webp" alt="Blue Hour" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Blue Hour" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#f0b429"></div>
+            <div class="plate-cap">
+              <h3>Blue Hour</h3>
+            </div>
+            <p class="plate-kat">Posisi Matahari · Jendela singkat bernuansa biru dalam sebelum fajar dan sesudah senja.</p>
+            <p class="plate-panjang" hidden>Blue hour terjadi ketika matahari cukup jauh di bawah cakrawala sehingga atmosfer hanya meneruskan cahaya biru pendek gelombangnya ke langit. Momennya singkat — biasanya 20–40 menit — dan menghasilkan langit biru pekat yang seimbang dengan lampu kota. Warna dinginnya membuat pemandangan kota, gunung, atau pantai terlihat tenang dan sinematik.</p>
+          </article>
+          <article class="plate reveal" data-foto="civil-twilight" data-kat="posisi-matahari" data-judul="Civil Twilight" data-warna="#f0b429" tabindex="0" role="button" aria-label="Buka pelat 03 — Civil Twilight">
+            <div class="plate-media"><img src="images/momen-berdasarkan-posisi-matahari/civil-twilight.webp" alt="Civil Twilight" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Civil Twilight" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#f0b429"></div>
+            <div class="plate-cap">
+              <h3>Civil Twilight</h3>
+            </div>
+            <p class="plate-kat">Posisi Matahari · Tahap senja paling terang, 0–6 derajat di bawah cakrawala.</p>
+            <p class="plate-panjang" hidden>Senja sipil dimulai saat matahari baru saja tenggelam hingga 6 derajat di bawah cakrawala. Pada tahap ini langit masih cukup terang untuk melakukan aktivitas luar ruangan tanpa lampu, dan cakrawala barat biasanya dihiasi gradasi jingga ke ungu. Istilah sipil merujuk pada penerangan yang memadai untuk urusan sipil — bahari zaman dahulu bahkan menamai fase ini “waktu navigasi biru”.</p>
+          </article>
+          <article class="plate reveal" data-foto="nautical-twilight" data-kat="posisi-matahari" data-judul="Nautical Twilight" data-warna="#f0b429" tabindex="0" role="button" aria-label="Buka pelat 04 — Nautical Twilight">
+            <div class="plate-media"><img src="images/momen-berdasarkan-posisi-matahari/nautical-twilight.webp" alt="Nautical Twilight" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Nautical Twilight" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#f0b429"></div>
+            <div class="plate-cap">
+              <h3>Nautical Twilight</h3>
+            </div>
+            <p class="plate-kat">Posisi Matahari · Tahap senja 6–12 derajat, waktu pelaut menghitung bintang di cakrawala.</p>
+            <p class="plate-panjang" hidden>Senja nautika berlangsung ketika matahari berada 6 hingga 12 derajat di bawah cakrawala. Namanya berasal dari pelaut yang memanfaatkan momen ini: cakrawala masih terlihat, tetapi bintang-bintang sudah cukup terang untuk dijadikan patokan navigasi. Langit memperlihatkan lapisan ungu, biru tua, dan sisa jingga yang menyempit di garis horizon.</p>
+          </article>
+          <article class="plate reveal" data-foto="astronomical-twilight" data-kat="posisi-matahari" data-judul="Astronomical Twilight" data-warna="#f0b429" tabindex="0" role="button" aria-label="Buka pelat 05 — Astronomical Twilight">
+            <div class="plate-media"><img src="images/momen-berdasarkan-posisi-matahari/astronomical-twilight.webp" alt="Astronomical Twilight" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Astronomical Twilight" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#f0b429"></div>
+            <div class="plate-cap">
+              <h3>Astronomical Twilight</h3>
+            </div>
+            <p class="plate-kat">Posisi Matahari · Tahap senja terakhir, 12–18 derajat, menuju langit benar-benar gelap.</p>
+            <p class="plate-panjang" hidden>Senja astronomis mencakup sudut 12 hingga 18 derajat di bawah cakrawala. Setelah matahari melewati batas 18 derajat, langit dianggap “gelap penuh” dan objek langit paling redup pun mulai terlihat. Bagi pengamat bintang, momen ini adalah penanda akhir kesibukan cakrawala dan awal dimulainya malam yang sesungguhnya.</p>
+          </article>
+          <article class="plate reveal" data-foto="sun-dog" data-kat="pembiasan-cahaya" data-judul="Sun Dog (Parhelion)" data-warna="#e0704a" tabindex="0" role="button" aria-label="Buka pelat 06 — Sun Dog (Parhelion)">
+            <div class="plate-media"><img src="images/fenomena-pembiasan-cahaya-matahari/sun-dog%20(parhelion).jpg" alt="Sun Dog (Parhelion)" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Sun Dog (Parhelion)" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#e0704a"></div>
+            <div class="plate-cap">
+              <h3>Sun Dog (Parhelion)</h3>
+            </div>
+            <p class="plate-kat">Pembiasan Cahaya · Bercak cahaya seperti matahari kembar di sisi kiri dan kanan matahari.</p>
+            <p class="plate-panjang" hidden>Sun dog — “anjing matahari” — adalah bercak cahaya terang yang muncul di kiri dan kanan matahari, biasanya pada jarak sekitar 22 derajat. Fenomena ini disebabkan oleh pembiasan cahaya pada kristal es berbentuk pelat di awan cirrus rendah. Kadang terlihat seperti matahari kembar, lengkap dengan garis pelangi samar di tepinya.</p>
+          </article>
+          <article class="plate reveal" data-foto="solar-halo" data-kat="pembiasan-cahaya" data-judul="Solar Halo" data-warna="#e0704a" tabindex="0" role="button" aria-label="Buka pelat 07 — Solar Halo">
+            <div class="plate-media"><img src="images/fenomena-pembiasan-cahaya-matahari/solar-halo.jpg" alt="Solar Halo" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Solar Halo" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#e0704a"></div>
+            <div class="plate-cap">
+              <h3>Solar Halo</h3>
+            </div>
+            <p class="plate-kat">Pembiasan Cahaya · Lingkaran cahaya berdiameter ±22° yang mengelilingi matahari.</p>
+            <p class="plate-panjang" hidden>Halo 22 derajat adalah lingkaran cahaya yang mengelilingi matahari akibat pembiasan cahaya pada kristal es heksagonal di awan cirus. Bagian dalam lingkaran cenderung kemerahan dan bagian luarnya kebiruan karena panjang gelombang warna dibiaskan dengan sudut berbeda. Pemandangan ini sering dianggap pertanda datangnya hujan, sebab cirrus sering mendahului sistem cuaca basah.</p>
+          </article>
+          <article class="plate reveal" data-foto="cloud-iridescence" data-kat="pembiasan-cahaya" data-judul="Cloud Iridescence" data-warna="#e0704a" tabindex="0" role="button" aria-label="Buka pelat 08 — Cloud Iridescence">
+            <div class="plate-media"><img src="images/fenomena-pembiasan-cahaya-matahari/cloud-iridescence.jpeg" alt="Cloud Iridescence" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Cloud Iridescence" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#e0704a"></div>
+            <div class="plate-cap">
+              <h3>Cloud Iridescence</h3>
+            </div>
+            <p class="plate-kat">Pembiasan Cahaya · Awan tipis berkilau warna-warni seperti minyak di air.</p>
+            <p class="plate-panjang" hidden>Awan irasi — atau irisasi — menampakkan warna-warna pelangi yang lembut pada awan tipis, biasanya altocumulus atau lenticularis, yang berada dekat matahari. Warna terbentuk karena difraksi cahaya pada tetesan air atau kristal es yang ukurannya seragam. Tampilannya sering menyerupai minyak di atas air, dan paling jelas saat matahari tertutup sebagian oleh awan.</p>
+          </article>
+          <article class="plate reveal" data-foto="green-flash" data-kat="optik-atmosfer" data-judul="Green Flash" data-warna="#9cc46e" tabindex="0" role="button" aria-label="Buka pelat 09 — Green Flash">
+            <div class="plate-media"><img src="images/fenomena-optik-dan-atmosfer/green-flash.webp" alt="Green Flash" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Green Flash" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#9cc46e"></div>
+            <div class="plate-cap">
+              <h3>Green Flash</h3>
+            </div>
+            <p class="plate-kat">Optik &amp; Atmosfer · Kilatan hijau sesaat di tepi matahari saat terbit atau terbenam.</p>
+            <p class="plate-panjang" hidden>Green flash adalah kilatan berwarna hijau yang hanya berlangsung sedetik di tepi matahari ketika tepat di cakrawala. Atmosfer berperan seperti prisma raksasa: cahaya merah dibiaskan menjauh, sementara hijau sedikit terlambat dan tetap terlihat. Syaratnya tajam — udara bersih, cakrawala laut atau padang yang luas, dan matahari benar-benar mulus tenggelam.</p>
+          </article>
+          <article class="plate reveal" data-foto="crepuscular-rays" data-kat="optik-atmosfer" data-judul="Crepuscular Rays" data-warna="#9cc46e" tabindex="0" role="button" aria-label="Buka pelat 10 — Crepuscular Rays">
+            <div class="plate-media"><img src="images/fenomena-optik-dan-atmosfer/crepuscular-rays.jpg" alt="Crepuscular Rays" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Crepuscular Rays" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#9cc46e"></div>
+            <div class="plate-cap">
+              <h3>Crepuscular Rays</h3>
+            </div>
+            <p class="plate-kat">Optik &amp; Atmosfer · Berkas cahaya menyebar dari balik awan seperti kipas raksasa.</p>
+            <p class="plate-panjang" hidden>Sinar crepuskular adalah berkas cahaya matahari yang menyebar ke segala arah dari balik awan, seolah-olah matahari memancarkan jari-jari cahaya. Sebenarnya sinar-sinar itu sejajar; yang membuatnya tampak menyebar hanyalah ilusi perspektif — sama seperti rel kereta yang tampak menyatu di kejauhan. Bayangan awan yang menghalangi membentuk lapisan gelap di antara berkas terang.</p>
+          </article>
+          <article class="plate reveal" data-foto="belt-of-venus" data-kat="optik-atmosfer" data-judul="Belt of Venus" data-warna="#9cc46e" tabindex="0" role="button" aria-label="Buka pelat 11 — Belt of Venus">
+            <div class="plate-media"><img src="images/fenomena-optik-dan-atmosfer/belt-of-venus.webp" alt="Belt of Venus" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Belt of Venus" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#9cc46e"></div>
+            <div class="plate-cap">
+              <h3>Belt of Venus</h3>
+            </div>
+            <p class="plate-kat">Optik &amp; Atmosfer · Pita merah muda di langit timur saat matahari terbenam.</p>
+            <p class="plate-panjang" hidden>Belt of Venus — “sabuk Venus” — adalah pita warna merah muda yang muncul di langit timur beberapa menit setelah matahari terbenam, tepat di atas bayangan bumi sendiri. Di bawahnya terlihat lapisan biru keabu-abuan yang merupakan atmosfer dalam bayangan. Kontras antara pita merah muda dan bayangan biru inilah yang membuatnya mudah dikenali.</p>
+          </article>
+          <article class="plate reveal" data-foto="alpenglow" data-kat="optik-atmosfer" data-judul="Alpenglow" data-warna="#9cc46e" tabindex="0" role="button" aria-label="Buka pelat 12 — Alpenglow">
+            <div class="plate-media"><img src="images/fenomena-optik-dan-atmosfer/alpenglow.jpg" alt="Alpenglow" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Alpenglow" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#9cc46e"></div>
+            <div class="plate-cap">
+              <h3>Alpenglow</h3>
+            </div>
+            <p class="plate-kat">Optik &amp; Atmosfer · Puncak gunung bersinar merah keemasan setelah matahari tenggelam.</p>
+            <p class="plate-panjang" hidden>Alpenglow adalah cahaya merah atau keemasan yang menyinari puncak pegunungan, biasanya setelah matahari terbenam atau sebelum terbit. Cahaya matahari dibiaskan oleh atmosfer dan memantul ke puncak yang masih terjangkau sinar lurus. Fenomena ini paling terkenal di pegunungan Alpen — tempat namanya berasal — namun dapat diamati di pegunungan mana pun dengan langit yang jernih.</p>
+          </article>
+          <article class="plate reveal" data-foto="aurora" data-kat="cahaya-langit" data-judul="Aurora" data-warna="#6fc7d4" tabindex="0" role="button" aria-label="Buka pelat 13 — Aurora">
+            <div class="plate-media"><img src="images/fenomena-cahaya-langit-ekstrem/aurora.webp" alt="Aurora" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Aurora" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#6fc7d4"></div>
+            <div class="plate-cap">
+              <h3>Aurora</h3>
+            </div>
+            <p class="plate-kat">Cahaya Langit Ekstrem · Tirai cahaya hijau–ungu yang menari di langit kutub.</p>
+            <p class="plate-panjang" hidden>Aurora — dikenal juga sebagai lampu utara atau lampu selatan — terbentuk ketika partikel bermuatan dari Matahari menabrak gas di atmosfer bagian atas. Oksigen memancarkan hijau dan merah, nitrogen memberi ungu dan biru. Aurora paling sering terlihat di sekitar lingkaran kutub, namun pada badai geomagnet besar ia dapat turun hingga latitudang yang jauh lebih rendah.</p>
+          </article>
+          <article class="plate reveal" data-foto="airglow" data-kat="cahaya-langit" data-judul="Airglow" data-warna="#6fc7d4" tabindex="0" role="button" aria-label="Buka pelat 14 — Airglow">
+            <div class="plate-media"><img src="images/fenomena-cahaya-langit-ekstrem/airglow.jpg" alt="Airglow" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Airglow" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#6fc7d4"></div>
+            <div class="plate-cap">
+              <h3>Airglow</h3>
+            </div>
+            <p class="plate-kat">Cahaya Langit Ekstrem · Pancaran redup alami atmosfer yang membuat langit malam tak pernah gelap total.</p>
+            <p class="plate-panjang" hidden>Airglow adalah cahaya redup yang dipancarkan atmosfer itu sendiri akibat reaksi kimia — contohnya atom oksigen yang berekspresi setelah menyerap sinar ultraviolet siang hari. Berbeda dengan aurora, airglow terjadi di seluruh dunia dan sepanjang waktu, hanya saja sangat redup sehingga baru terekam jelas lewat eksposur panjang kamera. Dalam foto, ia tampak sebagai lapisan hijau samar di atas cakrawala.</p>
+          </article>
+          <article class="plate reveal" data-foto="zodiacal-light" data-kat="cahaya-langit" data-judul="Zodiacal Light" data-warna="#6fc7d4" tabindex="0" role="button" aria-label="Buka pelat 15 — Zodiacal Light">
+            <div class="plate-media"><img src="images/fenomena-cahaya-langit-ekstrem/zodiac-light.jpg" alt="Zodiacal Light" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Zodiacal Light" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#6fc7d4"></div>
+            <div class="plate-cap">
+              <h3>Zodiacal Light</h3>
+            </div>
+            <p class="plate-kat">Cahaya Langit Ekstrem · Konus cahaya samar dari debu tata surya di sepanjang rasi bintang.</p>
+            <p class="plate-panjang" hidden>Zodiacal light adalah konus cahaya segitiga yang membentang dari cakrawala, mengikuti jalur ekliptika — jalur yang sama dengan yang dilalui planet. Cahaya ini dipantulkan oleh debu sisa pembentukan tata surya yang tersebar di ruang antarplanet. Paling terlihat di daerah tropis saat senja musim semi atau fajar musim gugur, jauh dari polusi cahaya.</p>
+          </article>
+          <article class="plate reveal" data-foto="light-pillars" data-kat="efek-awan" data-judul="Light Pillars" data-warna="#7aa2e8" tabindex="0" role="button" aria-label="Buka pelat 16 — Light Pillars">
+            <div class="plate-media"><img src="images/efek-optik-awan-dan-partikel/light-pillars.jpg" alt="Light Pillars" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Light Pillars" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#7aa2e8"></div>
+            <div class="plate-cap">
+              <h3>Light Pillars</h3>
+            </div>
+            <p class="plate-kat">Efek Awan &amp; Partikel ·  tiang cahaya vertikal dari lampu atau matahari memantul pada kristal es.</p>
+            <p class="plate-panjang" hidden>Pilar cahaya terbentuk ketika kristal es berbentuk pelat melayang di udara dingin dan memantulkan cahaya dari sumber di bawah maupun di atas. Hasilnya adalah tiang-tiang cahaya vertikal seolah menjulang dari tanah atau turun dari langit. Sumbernya bisa lampu kota, bulan, bahkan matahari — pilir matahari disebut “sun pillar”.</p>
+          </article>
+          <article class="plate reveal" data-foto="fire-rainbow" data-kat="efek-awan" data-judul="Fire Rainbow" data-warna="#7aa2e8" tabindex="0" role="button" aria-label="Buka pelat 17 — Fire Rainbow">
+            <div class="plate-media"><img src="images/efek-optik-awan-dan-partikel/fire-rainbow.jpg" alt="Fire Rainbow" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Fire Rainbow" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#7aa2e8"></div>
+            <div class="plate-cap">
+              <h3>Fire Rainbow</h3>
+            </div>
+            <p class="plate-kat">Efek Awan &amp; Partikel · Awan cirrus yang diwarnai pelangi, tampak seperti api di langit.</p>
+            <p class="plate-panjang" hidden>Pelangi api — nama ilmiahnya circumhorizontal arc — adalah pita warna pelangi yang membentang horizontal pada awan cirrus. Namanya “api” hanya karena tampilannya yang merah menyala bagaikan lidah api, bukan karena panas. Syaratnya ketat: matahari harus tinggi di langit (lebih dari 58°) dan awan cirrus berisi kristal es pelat harus berada tepat di atas pengamat.</p>
+          </article>
+          <article class="plate reveal" data-foto="foggy-morning" data-kat="cuaca-musiman" data-judul="Foggy Morning" data-warna="#a9b8d6" tabindex="0" role="button" aria-label="Buka pelat 18 — Foggy Morning">
+            <div class="plate-media"><img src="images/momen-cuaca-dan-musiman/foggy-morning.webp" alt="Foggy Morning" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Foggy Morning" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#a9b8d6"></div>
+            <div class="plate-cap">
+              <h3>Foggy Morning</h3>
+            </div>
+            <p class="plate-kat">Cuaca &amp; Musiman · Kabut rendah yang melembutkan cahaya pagi menjadi biru keperakan.</p>
+            <p class="plate-panjang" hidden>Kabut terbentuk ketika udara lembap mendingin hingga titik embun, mengubah uap air menjadi tetesan mikro yang meneruskan cahaya ke segala arah. Cahaya matahari yang menembus kabut tersebar merata, menghasilkan pencahayaan lembut tanpa bayangan keras — hampir seperti softbox raksasa buatan alam. Kabut paling sering muncul dini hari di lembah, danau, atau pesisir.</p>
+          </article>
+          <article class="plate reveal" data-foto="overcast-light" data-kat="cuaca-musiman" data-judul="Overcast Light" data-warna="#a9b8d6" tabindex="0" role="button" aria-label="Buka pelat 19 — Overcast Light">
+            <div class="plate-media"><img src="images/momen-cuaca-dan-musiman/overcast-light.webp" alt="Overcast Light" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Overcast Light" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#a9b8d6"></div>
+            <div class="plate-cap">
+              <h3>Overcast Light</h3>
+            </div>
+            <p class="plate-kat">Cuaca &amp; Musiman · Langit tertutup yang mengubah seluruh lanskap menjadi warna kelabu lembut.</p>
+            <p class="plate-panjang" hidden>Pada langit mendung, awan tebal menyaring cahaya matahari dan menyebarkannya merata ke seluruh langit. Hasilnya adalah pencahayaan tanpa arah: warna terlihat jujur, bayangan hilang, dan kontras menurun. Bagi fotografer lanskap, mendung bukan cuaca buruk — ia mengungkap warna tanaman, batu, dan air yang biasanya tenggelam oleh silau matahari.</p>
+          </article>
+          <article class="plate reveal" data-foto="bioluminesensi" data-kat="lanskap-eksotis" data-judul="Bioluminescent Night" data-warna="#5ec0a8" tabindex="0" role="button" aria-label="Buka pelat 20 — Bioluminescent Night">
+            <div class="plate-media"><img src="images/momen-lanskap-eksotis/bioluminecent-night.webp" alt="Bioluminescent Night" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Bioluminescent Night" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#5ec0a8"></div>
+            <div class="plate-cap">
+              <h3>Bioluminescent Night</h3>
+            </div>
+            <p class="plate-kat">Lanskap Eksotis · Laut yang bercahaya biru pekat akibat organisme mikroskopis.</p>
+            <p class="plate-panjang" hidden>Bioluminesensi laut terjadi ketika organisme mikroskopis bernama dinoflagellata memancarkan cahaya biru ketika terganggu — misalnya oleh ombak, perahu, atau ikan yang berenang. Reaksi kimia di dalam tubuh mereka mengubah energi menjadi cahaya hampir tanpa panas. Fenomena ini bisa ditemui di banyak pesisir dunia, dan dalam jumlah besar membuat pantai tampak seperti lautan bintang.</p>
+          </article>
+        </div>
+        <p id="kosong" class="mini-empty" hidden>Tidak ada pelat pada kategori ini.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox: potongan keras -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-judul">
+    <button class="lightbox-close" id="lb-close" aria-label="Tutup">&times;</button>
+    <div class="lightbox-panel" id="lb-panel">
+      <img id="lb-img" alt="" hidden>
+      <div class="lightbox-body" id="lb-body">
+        <h3 id="lb-judul"></h3>
+        <p id="lb-teks"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/galeri.js"></script>
+</body>
+</html>

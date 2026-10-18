@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumen — Katalog Pelat Cahaya Alam</title>
+  <meta name="description"
+    content="Arsip pelat 20 fenomena cahaya alam: golden hour, aurora, halo matahari, green flash, dan lainnya — lengkap dengan anotasi ilmiahnya.">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d1118'/%3E%3Crect x='6' y='6' width='20' height='5' fill='%23f0b429'/%3E%3Crect x='6' y='14' width='20' height='3' fill='%236fc7d4'/%3E%3Crect x='6' y='20' width='20' height='2' fill='%23d97a9e'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800;900&family=Public+Sans:wght@300;400;500;600;700&family=Spline+Sans+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- DUNIA: Pelat Spektrum (seed 4a66d831) — arsip pelat cahaya. THESIS: setiap fenomena adalah pelat terukur (nomor, kode kategori, λ); menolak hero gradasi + kartu glass template AI. OWN-WORLD: ground emulsi #0d1118, pelat #151b26, amber #f0b429, sian #6fc7d4, mawar #d97a9e; Archivo/Public Sans/Spline Sans Mono (mono hanya untuk data); sudut tegas, garis 1px. STORY: pengunjung menelusuri arsip cahaya, membaca kausalitasnya, lalu menyimpan pilihan pribadi setelah mendaftar. FIRST VIEWPORT: sampul foto aurora full-bleed + masthead LUMEN + baris mono "20 PELAT · 7 KATEGORI", aksi utama amber persegi. FORM: katalog pelat ilmiah; pita spektrum berlabel teks; lightbox potongan keras. FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, , and every shipping raster carrying its provenance -->
+  <header class="nav" id="nav"></header>
+
+  <main>
+    <!-- SAMPUL: pelat depan arsip -->
+    <section class="cover">
+      <img class="cover-img" src="images/fenomena-cahaya-langit-ekstrem/aurora.webp"
+        alt="Tirai aurora hijau di langit malam di atas siluet pegunungan">
+      <div class="cover-veil"></div>
+      <div class="cover-inner">
+        <h1 class="masthead">LUMEN</h1>
+        <p class="cover-line">20 pelat · 7 kategori · cahaya alam</p>
+        <p class="cover-text">
+          Arsip fenomena cahaya alam. Setiap kejadian diperlakukan sebagai pelat.</p>
+        <div class="cover-actions">
+          <a href="galeri.html" class="btn btn-primary">Buka Galeri</a>
+          <a href="news.html" class="btn btn-line">Baca Artikel</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DINDING PELAT -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Galeri</h2>
+          <span class="mono">7 kategori · 20 pelat</span>
+        </div>
+        <div class="grid-plates" id="dinding">
+          <article class="plate reveal" data-foto="golden-hour" data-kat="posisi-matahari" tabindex="0" role="button" aria-label="Buka pelat 01 — Golden Hour">
+            <div class="plate-media"><img src="images/momen-berdasarkan-posisi-matahari/golden-hour.avif" alt="Golden Hour" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Golden Hour" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#f0b429"></div>
+            <div class="plate-cap">
+              <h3>Golden Hour</h3>
+            </div>
+            <p class="plate-kat">Posisi Matahari · Jam emas ketika matahari rendah dan cahaya menjadi hangat serta lembut.</p>
+          </article>
+          <article class="plate reveal" data-foto="sun-dog" data-kat="pembiasan-cahaya" tabindex="0" role="button" aria-label="Buka pelat 06 — Sun Dog (Parhelion)">
+            <div class="plate-media"><img src="images/fenomena-pembiasan-cahaya-matahari/sun-dog%20(parhelion).jpg" alt="Sun Dog (Parhelion)" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Sun Dog (Parhelion)" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#e0704a"></div>
+            <div class="plate-cap">
+              <h3>Sun Dog (Parhelion)</h3>
+            </div>
+            <p class="plate-kat">Pembiasan Cahaya · Bercak cahaya seperti matahari kembar di sisi kiri dan kanan matahari.</p>
+          </article>
+          <article class="plate reveal" data-foto="green-flash" data-kat="optik-atmosfer" tabindex="0" role="button" aria-label="Buka pelat 09 — Green Flash">
+            <div class="plate-media"><img src="images/fenomena-optik-dan-atmosfer/green-flash.webp" alt="Green Flash" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Green Flash" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#9cc46e"></div>
+            <div class="plate-cap">
+              <h3>Green Flash</h3>
+            </div>
+            <p class="plate-kat">Optik &amp; Atmosfer · Kilatan hijau sesaat di tepi matahari saat terbit atau terbenam.</p>
+          </article>
+          <article class="plate reveal" data-foto="aurora" data-kat="cahaya-langit" tabindex="0" role="button" aria-label="Buka pelat 13 — Aurora">
+            <div class="plate-media"><img src="images/fenomena-cahaya-langit-ekstrem/aurora.webp" alt="Aurora" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Aurora" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#6fc7d4"></div>
+            <div class="plate-cap">
+              <h3>Aurora</h3>
+            </div>
+            <p class="plate-kat">Cahaya Langit Ekstrem · Tirai cahaya hijau–ungu yang menari di langit kutub.</p>
+          </article>
+          <article class="plate reveal" data-foto="light-pillars" data-kat="efek-awan" tabindex="0" role="button" aria-label="Buka pelat 16 — Light Pillars">
+            <div class="plate-media"><img src="images/efek-optik-awan-dan-partikel/light-pillars.jpg" alt="Light Pillars" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Light Pillars" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#7aa2e8"></div>
+            <div class="plate-cap">
+              <h3>Light Pillars</h3>
+            </div>
+            <p class="plate-kat">Efek Awan &amp; Partikel ·  tiang cahaya vertikal dari lampu atau matahari memantul pada kristal es.</p>
+          </article>
+          <article class="plate reveal" data-foto="foggy-morning" data-kat="cuaca-musiman" tabindex="0" role="button" aria-label="Buka pelat 18 — Foggy Morning">
+            <div class="plate-media"><img src="images/momen-cuaca-dan-musiman/foggy-morning.webp" alt="Foggy Morning" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Foggy Morning" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#a9b8d6"></div>
+            <div class="plate-cap">
+              <h3>Foggy Morning</h3>
+            </div>
+            <p class="plate-kat">Cuaca &amp; Musiman · Kabut rendah yang melembutkan cahaya pagi menjadi biru keperakan.</p>
+          </article>
+          <article class="plate reveal" data-foto="bioluminesensi" data-kat="lanskap-eksotis" tabindex="0" role="button" aria-label="Buka pelat 20 — Bioluminescent Night">
+            <div class="plate-media"><img src="images/momen-lanskap-eksotis/bioluminecent-night.webp" alt="Bioluminescent Night" loading="lazy"></div>
+            <button class="fav" type="button" aria-label="Simpan Bioluminescent Night" aria-pressed="false"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 20.5l-1.3-1.2C6 15.2 3 12.5 3 9.2 3 6.5 5.1 4.4 7.8 4.4c1.5 0 3 .7 3.9 1.9l.3.4.3-.4c.9-1.2 2.4-1.9 3.9-1.9 2.7 0 4.8 2.1 4.8 4.8 0 3.3-3 6-7.7 10.1L12 20.5z"/></svg></button>
+            <div class="spec-bar" style="--cat:#5ec0a8"></div>
+            <div class="plate-cap">
+              <h3>Bioluminescent Night</h3>
+            </div>
+            <p class="plate-kat">Lanskap Eksotis · Laut yang bercahaya biru pekat akibat organisme mikroskopis.</p>
+          </article>
+        </div>
+        <p style="margin-top:1.6rem">
+          <a href="galeri.html" class="btn btn-line">Semua pelat &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- artikel -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <h2>Artikel</h2>
+          <span class="mono">6 artikel</span>
+        </div>
+        <div class="artikel-list" id="artikel-teaser">
+          <article class="artikel-row reveal">
+            <div class="artikel-meta"><span>12 September 2026</span><span>4 menit baca</span></div>
+            <div>
+              <h3 class="artikel-title"><a href="artikel.html?slug=mengapa-senja-berwarna-jingga">Mengapa Langit Senja Berwarna Jingga?</a></h3>
+              <p class="artikel-excerpt">Jawaban singkatnya ada di panjang gelombang cahaya dan cara atmosfer menyaringnya. Begini penjelasan lengkapnya.</p>
+            </div>
+            <div class="artikel-thumb"><img src="images/momen-berdasarkan-posisi-matahari/golden-hour.avif" alt="" loading="lazy"></div>
+          </article>
+          <article class="artikel-row reveal">
+            <div class="artikel-meta"><span>28 September 2026</span><span>5 menit baca</span></div>
+            <div>
+              <h3 class="artikel-title"><a href="artikel.html?slug=aurora-partikel-matahari">Aurora: Ketika Partikel Matahari Menari di Kutub</a></h3>
+              <p class="artikel-excerpt">Tirai cahaya hijau dan ungu di langit kutub lahir dari badai surya jutaan kilometer jauhnya.</p>
+            </div>
+            <div class="artikel-thumb"><img src="images/fenomena-cahaya-langit-ekstrem/aurora.webp" alt="" loading="lazy"></div>
+          </article>
+          <article class="artikel-row reveal">
+            <div class="artikel-meta"><span>2 Oktober 2026</span><span>4 menit baca</span></div>
+            <div>
+              <h3 class="artikel-title"><a href="artikel.html?slug=green-flash-yang-jarang">Green Flash: Kilatan Hijau yang Jarang Terekam</a></h3>
+              <p class="artikel-excerpt">Bertahan hanya sepersekian detik, namun fisikanya menceritakan seluruh atmosfer Bumi.</p>
+            </div>
+            <div class="artikel-thumb"><img src="images/fenomena-optik-dan-atmosfer/green-flash.webp" alt="" loading="lazy"></div>
+          </article>
+        </div>
+        <p style="margin-top:1.6rem">
+          <a href="news.html" class="btn btn-line">Semua artikel &rarr;</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- LEMARI PRIBADI: dua versi markup, dipilih js/index.js sesuai status masuk -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="panel reveal" data-saat="tamu" style="padding:2.4rem">
+          <h2 style="font-size:1.6rem;border:0;padding:0;margin-bottom:0.4em">Lemari pelat pribadi</h2>
+          <p class="section-lead">
+            Daftar untuk menyimpan pelat favorit dan menandai artikel yang disukai —
+            semuanya terkumpul di dashboard Anda.
+          </p>
+          <p style="margin-top:1.2rem">
+            <a href="daftar.html" class="btn btn-primary">Daftar</a>
+          </p>
+        </div>
+        <div class="panel reveal" data-saat="anggota" style="padding:2.4rem" hidden>
+          <h2 style="font-size:1.6rem;border:0;padding:0;margin-bottom:0.4em">Lemari pelat pribadi</h2>
+          <p class="section-lead">
+            Pelat favorit dan artikel yang Anda sukai sudah terkumpul di dashboard —
+            lengkap dengan statistik arsip pribadi Anda.
+          </p>
+          <p style="margin-top:1.2rem">
+            <a href="dashboard.html" class="btn btn-primary">Buka Dashboard &rarr;</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
+</html>
