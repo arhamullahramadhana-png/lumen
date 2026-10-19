@@ -1,15 +1,3 @@
-/* ============================================================
-   LUMEN — Skrip bersama (dunia Pelat Spektrum)
-   ============================================================ */
-
-/* DUNIA: Pelat Spektrum (seed 4a66d831) — arsip pelat cahaya.
-   THESIS: setiap fenomena adalah pelat terukur (nomor, kode, λ); menolak hero gradasi + kartu glass template AI.
-   OWN-WORLD: ground emulsi #0d1118, pelat #151b26, amber #f0b429, sian #6fc7d4, mawar #d97a9e; Archivo/Public Sans/Spline Sans Mono (mono hanya untuk data); sudut tegas, garis 1px.
-   STORY: pengunjung menelusuri arsip cahaya, membaca kausalitasnya, lalu menyimpan pilihan pribadi setelah mendaftar.
-   FIRST VIEWPORT: sampul foto aurora full-bleed + masthead LUMEN + baris mono "20 PELAT · 7 KATEGORI", aksi utama amber persegi.
-   FORM: katalog pelat ilmiah; pita spektrum berlabel teks (bukan warna sendirian); lightbox potongan keras.
-   FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance */
-
 function esc(s) {
   return String(s).replace(/[&<>"']/g, (c) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",

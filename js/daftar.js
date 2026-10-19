@@ -1,7 +1,3 @@
-/* ============================================================
-   LUMEN — Perilaku halaman daftar (daftar.html)
-   ============================================================ */
-
 document.addEventListener("DOMContentLoaded", () => {
   if (Auth.getSession()) {
     location.href = "dashboard.html";

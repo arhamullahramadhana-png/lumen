@@ -1,10 +1,3 @@
-/* ============================================================
-   LUMEN — Perilaku halaman depan (index.html)
-   Konten pelat, teaser artikel, dan panel lemari ditulis langsung
-   di HTML; skrip ini hanya menangani klik kartu, tombol simpan,
-   dan memilih versi panel sesuai status masuk.
-   ============================================================ */
-
 document.addEventListener("DOMContentLoaded", () => {
   /* --- Dinding pelat: klik membuka pelat di galeri, hati menyimpan --- */
   const dinding = document.getElementById("dinding");

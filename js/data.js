@@ -1,8 +1,3 @@
-/* ============================================================
-   LUMEN — Data fenomena cahaya alam & artikel
-   Seluruh konten teks ditulis dalam Bahasa Indonesia.
-   ============================================================ */
-
 const KATEGORI = [
   { id: "posisi-matahari",    nama: "Posisi Matahari",        kode: "POS", lambda: "590 nm", warna: "#f0b429" },
   { id: "pembiasan-cahaya",   nama: "Pembiasan Cahaya",       kode: "PEM", lambda: "620 nm", warna: "#e0704a" },

@@ -1,10 +1,3 @@
-/* ============================================================
-   LUMEN — Perilaku halaman galeri (galeri.html)
-   Kartu pelat, tombol filter, dan kerangka lightbox ada di HTML;
-   skrip ini hanya menyaring kartu, membuka lightbox, dan
-   menandai pelat favorit.
-   ============================================================ */
-
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("grid");
   const box = document.getElementById("filters");

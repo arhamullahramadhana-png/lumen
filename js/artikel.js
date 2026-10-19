@@ -1,9 +1,3 @@
-/* ============================================================
-   LUMEN — Perilaku halaman artikel (artikel.html)
-   Keenam artikel ditulis lengkap di HTML; skrip ini menampilkan
-   artikel yang cocok dengan ?slug= dan menangani tombol suka.
-   ============================================================ */
-
 document.addEventListener("DOMContentLoaded", () => {
   const slug = new URLSearchParams(location.search).get("slug");
   const semua = [...document.querySelectorAll("article[data-slug]")];

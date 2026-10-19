@@ -1,9 +1,3 @@
-/* ============================================================
-   LUMEN — Perilaku dashboard (dashboard.html)
-   Kerangka halaman ada di HTML; skrip ini mengisinya dengan data
-   pengguna dari localStorage (js/auth.js) dan katalog (js/data.js).
-   ============================================================ */
-
 document.addEventListener("DOMContentLoaded", () => {
   const user = Auth.getSession();
   if (!requireLogin("dashboard.html")) return;

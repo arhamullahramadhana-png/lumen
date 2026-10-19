@@ -1,9 +1,3 @@
-/* ============================================================
-   LUMEN — Autentikasi & data pengguna (localStorage)
-   Catatan: penyimpanan password polos di localStorage hanya
-   untuk demo statis tanpa backend, bukan untuk produksi.
-   ============================================================ */
-
 const Auth = (() => {
   const K_USERS = "lumen_users";
   const K_SESSION = "lumen_session";
