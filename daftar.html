@@ -11,48 +11,77 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="nav" id="nav"></header>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-name">LUMEN</span>
+        <span class="brand-sub">Katalog Pelat Cahaya</span>
+      </a>
+      <input class="nav-toggle-input" type="checkbox" id="nav-toggle">
+      <label class="nav-toggle" for="nav-toggle">
+        <span class="visually-hidden">Buka menu navigasi</span>
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="galeri.html" class="nav-link">Galeri</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="about.html" class="nav-link">About</a>
+        <div class="nav-auth">
+          <a href="login.html" class="btn btn-line btn-sm">Masuk</a>
+          <a href="daftar.html" class="btn btn-primary btn-sm">Daftar</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
   <main>
     <div class="form-card">
-      <p class="mono mono-amber" style="margin-bottom:0.6rem">Daftar</p>
+      <p class="mono mono-amber form-eyebrow">Daftar</p>
       <h1>Buka Dashboard</h1>
       <p class="form-sub">Gratis — simpan gambar favorit dan tandai artikel yang Anda sukai.</p>
 
-      <div class="form-errors" id="errors" role="alert"></div>
-
-      <form id="form-daftar" novalidate>
-        <div class="field">
-          <label for="name">Nama lengkap</label>
-          <input id="name" name="name" type="text" autocomplete="name" required>
-        </div>
-        <div class="field">
-          <label for="username">Username</label>
-          <input id="username" name="username" type="text" autocomplete="username"
-                 placeholder="huruf, angka, underscore" required>
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required>
-        </div>
-        <div class="field">
-          <label for="password">Password</label>
-          <input id="password" name="password" type="password" autocomplete="new-password"
-                 placeholder="minimal 6 karakter" required>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Daftar</button>
-      </form>
+      <div class="field">
+        <label for="name">Nama lengkap</label>
+        <input id="name" name="name" type="text" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" autocomplete="username" placeholder="huruf, angka, underscore">
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="new-password" placeholder="minimal 6 karakter">
+      </div>
+      <button type="button" class="btn btn-primary btn-block" disabled>Daftar</button>
 
       <p class="form-alt">
         Sudah punya akun? <a href="login.html">Masuk di sini</a>
       </p>
+      <p class="form-alt">
+        <a href="index.html">&larr; Kembali ke beranda</a>
+      </p>
     </div>
   </main>
 
-  <footer class="footer" id="footer"></footer>
-
-  <script src="js/auth.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/daftar.js"></script>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <span class="brand-name">LUMEN</span>
+        <p class="footer-tag">Arsip pelat fenomena cahaya alam — dari garis senja sampai aurora.</p>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="news.html">News</a>
+        <a href="about.html">About</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Lumen · M. Arhamullah Ramadhan</p>
+    </div>
+  </footer>
 </body>
 </html>

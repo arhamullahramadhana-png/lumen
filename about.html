@@ -12,16 +12,36 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="nav" id="nav"></header>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-name">LUMEN</span>
+        <span class="brand-sub">Katalog Pelat Cahaya</span>
+      </a>
+      <input class="nav-toggle-input" type="checkbox" id="nav-toggle">
+      <label class="nav-toggle" for="nav-toggle">
+        <span class="visually-hidden">Buka menu navigasi</span>
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="galeri.html" class="nav-link">Galeri</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="about.html" class="nav-link active" aria-current="page">About</a>
+        <div class="nav-auth">
+          <a href="login.html" class="btn btn-line btn-sm">Masuk</a>
+          <a href="daftar.html" class="btn btn-primary btn-sm">Daftar</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
   <main>
-    <!-- Judul memakai kolom baca yang sama dengan isi (600px, .prosa),
-         supaya tepi kiri judul sejajar dengan paragraf di bawahnya. -->
     <div class="page-head container prosa">
       <h1>Tentang Lumen</h1>
     </div>
 
-    <section class="section" style="padding-top:1.5rem">
+    <section class="section section-top-sm">
       <div class="container prosa static-body">
         <p class="section-lead">
           Lumen adalah arsip pelat fenomena cahaya alam — dari ilusi optik di
@@ -37,26 +57,30 @@
         </p>
         <h2>Isi arsip</h2>
         <p>
-          Saat ini Lumen memuat 20 pelat dalam 7 kategori ilmiah, 6 artikel
-          populer sains, serta fitur akun agar Anda dapat menyimpan favorit dan
-          mengikuti artikel yang disukai.
+          Saat ini Lumen memuat 20 pelat dalam 7 kategori ilmiah dan 6 artikel
+          populer sains.
         </p>
-        <h2>Catatan teknis</h2>
-        <p>
-          Lumen dibangun sebagai situs statis HTML, CSS, dan JavaScript murni.
-          Pendaftaran dan masuk disimpan di <em>localStorage</em> peramban —
-          cukup untuk demonstrasi, tetapi bukan autentikasi keamanan sungguhan.
-        </p>
-        <div style="border-top:1px solid var(--edge);margin:2.4rem 0;padding-top:1.8rem">
+        <div class="prosa-foot">
           <a href="galeri.html" class="btn btn-primary">Buka galeri</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer" id="footer"></footer>
-
-  <script src="js/auth.js"></script>
-  <script src="js/main.js"></script>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <span class="brand-name">LUMEN</span>
+        <p class="footer-tag">Arsip pelat fenomena cahaya alam — dari garis senja sampai aurora.</p>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="news.html">News</a>
+        <a href="about.html">About</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Lumen · M. Arhamullah Ramadhan</p>
+    </div>
+  </footer>
 </body>
 </html>

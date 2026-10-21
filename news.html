@@ -12,7 +12,29 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="nav" id="nav"></header>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-name">LUMEN</span>
+        <span class="brand-sub">Katalog Pelat Cahaya</span>
+      </a>
+      <input class="nav-toggle-input" type="checkbox" id="nav-toggle">
+      <label class="nav-toggle" for="nav-toggle">
+        <span class="visually-hidden">Buka menu navigasi</span>
+        <span></span><span></span><span></span>
+      </label>
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="galeri.html" class="nav-link">Galeri</a>
+        <a href="news.html" class="nav-link active" aria-current="page">News</a>
+        <a href="about.html" class="nav-link">About</a>
+        <div class="nav-auth">
+          <a href="login.html" class="btn btn-line btn-sm">Masuk</a>
+          <a href="daftar.html" class="btn btn-primary btn-sm">Daftar</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
   <main>
     <div class="page-head container">
@@ -23,13 +45,13 @@
       </p>
     </div>
 
-    <section class="section" style="padding-top:2rem">
+    <section class="section section-top-md">
       <div class="container">
-        <div class="artikel-list" id="daftar">
+        <div class="artikel-list">
           <article class="artikel-row reveal">
             <div class="artikel-meta"><span>12 September 2026</span><span>4 menit baca</span></div>
             <div>
-              <h2 class="artikel-title"><a href="artikel.html?slug=mengapa-senja-berwarna-jingga">Mengapa Langit Senja Berwarna Jingga?</a></h2>
+              <h2 class="artikel-title"><a href="artikel/mengapa-senja-berwarna-jingga.html">Mengapa Langit Senja Berwarna Jingga?</a></h2>
               <p class="artikel-excerpt">Jawaban singkatnya ada di panjang gelombang cahaya dan cara atmosfer menyaringnya. Begini penjelasan lengkapnya.</p>
             </div>
             <div class="artikel-thumb"><img src="images/momen-berdasarkan-posisi-matahari/golden-hour.avif" alt="" loading="lazy"></div>
@@ -37,7 +59,7 @@
           <article class="artikel-row reveal">
             <div class="artikel-meta"><span>28 September 2026</span><span>5 menit baca</span></div>
             <div>
-              <h2 class="artikel-title"><a href="artikel.html?slug=aurora-partikel-matahari">Aurora: Ketika Partikel Matahari Menari di Kutub</a></h2>
+              <h2 class="artikel-title"><a href="artikel/aurora-partikel-matahari.html">Aurora: Ketika Partikel Matahari Menari di Kutub</a></h2>
               <p class="artikel-excerpt">Tirai cahaya hijau dan ungu di langit kutub lahir dari badai surya jutaan kilometer jauhnya.</p>
             </div>
             <div class="artikel-thumb"><img src="images/fenomena-cahaya-langit-ekstrem/aurora.webp" alt="" loading="lazy"></div>
@@ -45,7 +67,7 @@
           <article class="artikel-row reveal">
             <div class="artikel-meta"><span>2 Oktober 2026</span><span>4 menit baca</span></div>
             <div>
-              <h2 class="artikel-title"><a href="artikel.html?slug=green-flash-yang-jarang">Green Flash: Kilatan Hijau yang Jarang Terekam</a></h2>
+              <h2 class="artikel-title"><a href="artikel/green-flash-yang-jarang.html">Green Flash: Kilatan Hijau yang Jarang Terekam</a></h2>
               <p class="artikel-excerpt">Bertahan hanya sepersekian detik, namun fisikanya menceritakan seluruh atmosfer Bumi.</p>
             </div>
             <div class="artikel-thumb"><img src="images/fenomena-optik-dan-atmosfer/green-flash.webp" alt="" loading="lazy"></div>
@@ -53,7 +75,7 @@
           <article class="artikel-row reveal">
             <div class="artikel-meta"><span>8 Oktober 2026</span><span>4 menit baca</span></div>
             <div>
-              <h2 class="artikel-title"><a href="artikel.html?slug=halo-dan-sun-dog">Halo dan Sun Dog: Cerminan Es di Awan Cirrus</a></h2>
+              <h2 class="artikel-title"><a href="artikel/halo-dan-sun-dog.html">Halo dan Sun Dog: Cerminan Es di Awan Cirrus</a></h2>
               <p class="artikel-excerpt">Lingkaran 22 derajat dan matahari kembar — dua wajah dari kristal es di langit tinggi.</p>
             </div>
             <div class="artikel-thumb"><img src="images/fenomena-pembiasan-cahaya-matahari/solar-halo.jpg" alt="" loading="lazy"></div>
@@ -61,7 +83,7 @@
           <article class="artikel-row reveal">
             <div class="artikel-meta"><span>14 Oktober 2026</span><span>5 menit baca</span></div>
             <div>
-              <h2 class="artikel-title"><a href="artikel.html?slug=laut-yang-bercahaya">Bioluminesensi: Laut yang Bercahaya di Malam Hari</a></h2>
+              <h2 class="artikel-title"><a href="artikel/laut-yang-bercahaya.html">Bioluminesensi: Laut yang Bercahaya di Malam Hari</a></h2>
               <p class="artikel-excerpt">Ombak biru pekat di pantai lahir dari reaksi kimia organisme sekecil pasir.</p>
             </div>
             <div class="artikel-thumb"><img src="images/momen-lanskap-eksotis/bioluminecent-night.webp" alt="" loading="lazy"></div>
@@ -69,7 +91,7 @@
           <article class="artikel-row reveal">
             <div class="artikel-meta"><span>18 Oktober 2026</span><span>4 menit baca</span></div>
             <div>
-              <h2 class="artikel-title"><a href="artikel.html?slug=cahaya-dari-debu-tata-surya">Zodiacal Light: Cahaya Misterius dari Debu Tata Surya</a></h2>
+              <h2 class="artikel-title"><a href="artikel/cahaya-dari-debu-tata-surya.html">Zodiacal Light: Cahaya Misterius dari Debu Tata Surya</a></h2>
               <p class="artikel-excerpt">Konus cahaya samar di ekliptika adalah pantulan dari sisa pembentukan tata surya kita.</p>
             </div>
             <div class="artikel-thumb"><img src="images/fenomena-cahaya-langit-ekstrem/zodiac-light.jpg" alt="" loading="lazy"></div>
@@ -79,9 +101,20 @@
     </section>
   </main>
 
-  <footer class="footer" id="footer"></footer>
-
-  <script src="js/auth.js"></script>
-  <script src="js/main.js"></script>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <span class="brand-name">LUMEN</span>
+        <p class="footer-tag">Arsip pelat fenomena cahaya alam — dari garis senja sampai aurora.</p>
+      </div>
+      <div class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="news.html">News</a>
+        <a href="about.html">About</a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Lumen · M. Arhamullah Ramadhan</p>
+    </div>
+  </footer>
 </body>
 </html>

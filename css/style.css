@@ -18,7 +18,6 @@
   --radius: 2px;
 }
 
-/* --- Dasar --- */
 *,
 *::before,
 *::after {
@@ -35,7 +34,6 @@ body {
   line-height: 1.65;
   color: var(--ink);
   background-color: var(--ground);
-  /* Kisi registrasi pelat — alat pengukur dari dunia arsip, bukan tekstur kosmetik */
   background-image:
     repeating-linear-gradient(0deg, transparent 0 63px, rgba(154, 163, 180, 0.045) 63px 64px),
     repeating-linear-gradient(90deg, transparent 0 63px, rgba(154, 163, 180, 0.045) 63px 64px);
@@ -64,8 +62,6 @@ h1, h2, h3 {
 p {
   margin: 0 0 1em;
 }
-
-/* Permukaan browser ikut sistem */
 ::selection {
   background: var(--amber);
   color: var(--ground);
@@ -98,7 +94,6 @@ input {
   padding-inline: 24px;
 }
 
-/* --- Notasi terukur (mono = data, bukan kostum) --- */
 .mono {
   font-family: var(--font-mono);
   font-size: 0.78rem;
@@ -109,6 +104,19 @@ input {
   color: var(--dim);
 }
 .mono-amber { color: var(--amber); }
+
+/* Teks yang hanya terbaca pembaca layar, tidak tampil di halaman. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 /* --- Navigasi --- */
 .nav {
@@ -171,23 +179,18 @@ input {
   gap: 10px;
   margin-left: 10px;
 }
-.nav-user {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--dim);
-  font-size: 0.85rem;
-}
-.nav-avatar {
-  width: 28px;
-  height: 28px;
-  display: grid;
-  place-items: center;
-  font-family: var(--font-mono);
-  font-weight: 600;
-  font-size: 0.8rem;
-  color: var(--ground);
-  background: var(--amber);
+/* Kotak centang menu: tak terlihat, tetap fokusable lewat keyboard. */
+.nav-toggle-input {
+  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 .nav-toggle {
   display: none;
@@ -205,11 +208,19 @@ input {
   background: var(--ink);
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
-.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-.nav-toggle.open span:nth-child(2) { opacity: 0; }
-.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.nav-toggle .visually-hidden {
+  width: 1px;
+  height: 1px;
+  background: none;
+}
+.nav-toggle-input:focus-visible ~ .nav-toggle {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+.nav-toggle-input:checked ~ .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle-input:checked ~ .nav-toggle span:nth-child(2) { opacity: 0; }
+.nav-toggle-input:checked ~ .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* --- Tombol: persegi, datar, tanpa glow --- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -255,8 +266,16 @@ input {
 .btn-block {
   width: 100%;
 }
+.btn[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.btn-primary[disabled]:hover {
+  background: var(--amber);
+  color: var(--ground);
+}
 
-/* --- Sampul (first viewport index) --- */
+/* --- Sampul --- */
 .cover {
   position: relative;
   min-height: min(82vh, 720px);
@@ -317,8 +336,6 @@ input {
 }
 /* --- Bagian --- */
 .section {
-  /* padding-block saja: shorthand `padding` akan menghapus padding-inline
-     milik .container pada elemen yang memakai keduanya (artikel.html). */
   padding-block: clamp(3rem, 7vw, 5rem);
 }
 .section-head {
@@ -339,19 +356,27 @@ input {
   color: var(--dim);
   max-width: 68ch;
 }
+.section-top-none { padding-top: 0; }
+.section-top-sm { padding-top: 1.5rem; }
+.section-top-md { padding-top: 2rem; }
+.after-grid { margin-top: 1.6rem; }
 
-/* --- Grid pelat (contact sheet) --- */
+/* --- Gambar --- */
 .grid-plates {
+  margin-top: 15px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(258px, 1fr));
   gap: 20px;
 }
 .plate {
   position: relative;
+  display: block;
   background: var(--plate);
   border: 1px solid var(--edge);
   border-radius: var(--radius);
   overflow: hidden;
+  color: inherit;
+  text-decoration: none;
   cursor: pointer;
   transition: border-color 0.18s ease;
 }
@@ -376,7 +401,6 @@ input {
 .plate:hover .plate-media img {
   transform: scale(1.04);
 }
-/* Pita spektrum: warna = λ kategori; sapuan = respons "wake" saat disorot */
 .spec-bar {
   position: relative;
   height: 6px;
@@ -415,34 +439,19 @@ input {
   text-transform: uppercase;
   color: var(--dim);
 }
-.fav {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 34px;
-  height: 34px;
-  border: 1px solid rgba(232, 234, 239, 0.35);
-  background: rgba(13, 17, 24, 0.72);
-  color: var(--ink);
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  padding: 0;
-}
-.fav:hover {
-  border-color: var(--rose);
-  color: var(--rose);
-}
-.fav.on {
-  background: var(--rose);
-  border-color: var(--rose);
-  color: var(--ground);
-}
-.fav.on svg {
-  fill: currentColor;
-}
 
 /* --- Filter kategori --- */
+.filter-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
 .filter-row {
   display: flex;
   flex-wrap: wrap;
@@ -461,18 +470,45 @@ input {
   background: transparent;
   color: var(--dim);
   cursor: pointer;
+  user-select: none;
   transition: border-color 0.15s ease, color 0.15s ease;
 }
 .filter-btn:hover {
   color: var(--ink);
   border-color: var(--dim);
 }
-.filter-btn.active {
+#kat-semua:checked ~ .filter-row label[for="kat-semua"],
+#kat-posisi-matahari:checked ~ .filter-row label[for="kat-posisi-matahari"],
+#kat-pembiasan-cahaya:checked ~ .filter-row label[for="kat-pembiasan-cahaya"],
+#kat-optik-atmosfer:checked ~ .filter-row label[for="kat-optik-atmosfer"],
+#kat-cahaya-langit:checked ~ .filter-row label[for="kat-cahaya-langit"],
+#kat-efek-awan:checked ~ .filter-row label[for="kat-efek-awan"],
+#kat-cuaca-musiman:checked ~ .filter-row label[for="kat-cuaca-musiman"],
+#kat-lanskap-eksotis:checked ~ .filter-row label[for="kat-lanskap-eksotis"] {
   border-color: var(--amber);
   color: var(--amber);
 }
+#kat-semua:focus-visible ~ .filter-row label[for="kat-semua"],
+#kat-posisi-matahari:focus-visible ~ .filter-row label[for="kat-posisi-matahari"],
+#kat-pembiasan-cahaya:focus-visible ~ .filter-row label[for="kat-pembiasan-cahaya"],
+#kat-optik-atmosfer:focus-visible ~ .filter-row label[for="kat-optik-atmosfer"],
+#kat-cahaya-langit:focus-visible ~ .filter-row label[for="kat-cahaya-langit"],
+#kat-efek-awan:focus-visible ~ .filter-row label[for="kat-efek-awan"],
+#kat-cuaca-musiman:focus-visible ~ .filter-row label[for="kat-cuaca-musiman"],
+#kat-lanskap-eksotis:focus-visible ~ .filter-row label[for="kat-lanskap-eksotis"] {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+.galeri-filter .grid-plates .plate { display: none; }
+#kat-semua:checked ~ .grid-plates .plate { display: block; }
+#kat-posisi-matahari:checked ~ .grid-plates .plate[data-kat="posisi-matahari"] { display: block; }
+#kat-pembiasan-cahaya:checked ~ .grid-plates .plate[data-kat="pembiasan-cahaya"] { display: block; }
+#kat-optik-atmosfer:checked ~ .grid-plates .plate[data-kat="optik-atmosfer"] { display: block; }
+#kat-cahaya-langit:checked ~ .grid-plates .plate[data-kat="cahaya-langit"] { display: block; }
+#kat-efek-awan:checked ~ .grid-plates .plate[data-kat="efek-awan"] { display: block; }
+#kat-cuaca-musiman:checked ~ .grid-plates .plate[data-kat="cuaca-musiman"] { display: block; }
+#kat-lanskap-eksotis:checked ~ .grid-plates .plate[data-kat="lanskap-eksotis"] { display: block; }
 
-/* --- Lightbox: potongan keras, tanpa pop animasi --- */
 .lightbox {
   position: fixed;
   inset: 0;
@@ -483,10 +519,17 @@ input {
   justify-content: center;
   padding: 24px;
 }
-.lightbox.open {
+.lightbox:target {
   display: flex;
 }
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  border: 0;
+}
 .lightbox-panel {
+  position: relative;
+  z-index: 1;
   background: var(--plate);
   border: 1px solid var(--edge);
   max-width: 920px;
@@ -503,7 +546,7 @@ input {
   padding: 20px 24px 26px;
   border-top: 6px solid var(--cat, var(--edge));
 }
-.lightbox-body h3 {
+.lightbox-body h2 {
   font-size: 1.4rem;
   margin-bottom: 0.2em;
 }
@@ -513,6 +556,7 @@ input {
 }
 .lightbox-close {
   position: absolute;
+  z-index: 2;
   top: 16px;
   right: 16px;
   width: 40px;
@@ -561,6 +605,11 @@ input {
   font-variant-numeric: tabular-nums;
   padding-top: 4px;
 }
+.artikel-meta-head {
+  grid-auto-flow: column;
+  gap: 18px;
+  margin: 0.8rem 0 0.6rem;
+}
 .artikel-title {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -595,6 +644,17 @@ input {
 .prosa {
   max-width: 600px;
   margin-inline: auto;
+}
+.prosa-back {
+  color: inherit;
+}
+.prosa-lead {
+  margin-bottom: 1.6rem;
+}
+.prosa-foot {
+  border-top: 1px solid var(--edge);
+  margin: 2.6rem 0 0;
+  padding-top: 1.6rem;
 }
 .prosa h1 {
   font-size: clamp(2rem, 5vw, 2.9rem);
@@ -633,6 +693,9 @@ input {
 .form-card h1 {
   font-size: 1.7rem;
 }
+.form-eyebrow {
+  margin-bottom: 0.6rem;
+}
 .form-sub {
   color: var(--dim);
   font-size: 0.95rem;
@@ -668,17 +731,22 @@ input {
   outline: none;
   border-color: var(--amber);
 }
-.form-errors {
-  display: none;
-  border: 1px solid var(--rose);
-  color: var(--rose);
-  border-radius: var(--radius);
-  padding: 0.75em 1em;
-  font-size: 0.9rem;
-  margin-bottom: 1.2rem;
+.field input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
 }
-.form-errors.show {
-  display: block;
+.form-note {
+  border: 1px solid var(--edge);
+  border-top: 2px solid var(--amber);
+  color: var(--dim);
+  border-radius: var(--radius);
+  padding: 0.85em 1em;
+  font-size: 0.88rem;
+  margin-bottom: 1.4rem;
+}
+.form-note b {
+  color: var(--ink);
+  font-weight: 600;
 }
 .form-alt {
   text-align: center;
@@ -686,168 +754,23 @@ input {
   color: var(--dim);
   margin: 1.4rem 0 0;
 }
-
-/* --- Dashboard --- */
-.dash-grid {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 22px;
-  margin-top: 2rem;
-  align-items: start;
+@keyframes plate-masuk {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
-.panel {
-  background: var(--plate);
-  border: 1px solid var(--edge);
-  border-radius: var(--radius);
-  padding: 1.5rem;
-}
-.panel h2 {
-  font-size: 1.1rem;
-  padding-bottom: 0.7rem;
-  border-bottom: 1px solid var(--edge);
-  margin-bottom: 1rem;
-}
-.profile-head {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 1.1rem;
-}
-.profile-avatar {
-  width: 52px;
-  height: 52px;
-  display: grid;
-  place-items: center;
-  font-family: var(--font-mono);
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--ground);
-  background: var(--amber);
-}
-.profile-head b {
-  display: block;
-  font-size: 1.05rem;
-}
-.profile-head span {
-  color: var(--dim);
-  font-size: 0.88rem;
-}
-.profile-meta {
-  border-top: 1px solid var(--edge);
-  padding-top: 1rem;
-  font-size: 0.9rem;
-  color: var(--dim);
-  display: grid;
-  gap: 8px;
-  word-break: break-all;
-}
-.profile-meta b {
-  color: var(--ink);
-  font-weight: 500;
-}
-.stat-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-bottom: 1.6rem;
-}
-.stat {
-  background: var(--plate);
-  border: 1px solid var(--edge);
-  padding: 1rem 1.2rem;
-}
-.stat b {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--amber);
-  font-variant-numeric: tabular-nums;
-  line-height: 1.1;
-}
-.stat span {
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--dim);
-}
-.mini-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 8px;
-}
-.mini-list li {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 8px 10px;
-  border: 1px solid var(--edge);
-  font-size: 0.92rem;
-  background: var(--ground);
-}
-.mini-list img {
-  width: 52px;
-  height: 38px;
-  object-fit: cover;
-  flex-shrink: 0;
-}
-.mini-list a {
-  color: var(--ink);
-  font-weight: 500;
-  text-decoration: none;
-}
-.mini-list a:hover {
-  color: var(--amber);
-}
-.mini-empty {
-  color: var(--dim);
-  font-size: 0.92rem;
-  padding: 0.4rem 0;
-}
-.mini-empty a {
-  font-weight: 500;
-}
-
-/* --- Toast --- */
-.toast {
-  position: fixed;
-  left: 50%;
-  bottom: 26px;
-  transform: translateX(-50%) translateY(14px);
-  background: var(--plate-hi);
-  border: 1px solid var(--edge);
-  border-top: 2px solid var(--amber);
-  color: var(--ink);
-  padding: 0.7em 1.3em;
-  font-size: 0.9rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.22s ease, transform 0.22s ease;
-  z-index: 200;
-  max-width: min(90vw, 420px);
-}
-.toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
-/* --- Motion: pelat "proses" masuk sekali, lalu diam --- */
 .reveal {
-  opacity: 0;
-  filter: blur(7px);
-  transform: translateY(10px);
-  transition:
-    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  animation: plate-masuk 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
-.reveal.revealed {
-  opacity: 1;
-  filter: blur(0);
-  transform: none;
+@media print {
+  .reveal {
+    animation: none;
+  }
 }
 
 /* --- Footer --- */
@@ -892,27 +815,18 @@ input {
 }
 
 .page-head {
-  /* Jangan pakai shorthand `padding`: elemen ini juga memakai .container,
-     sehingga shorthand akan menolkan padding-inline dan teks menempel ke tepi. */
   padding-block: clamp(2.6rem, 6vw, 4rem) 0;
 }
 .page-head h1 {
   font-size: clamp(2rem, 5vw, 3rem);
 }
-
-/* --- Halaman statis --- */
 .static-body h2 {
   font-size: 1.35rem;
   margin-top: 1.8em;
 }
 
-/* ============================================================
-   RESPONSIF
-   ============================================================ */
+
 @media (max-width: 900px) {
-  .dash-grid {
-    grid-template-columns: 1fr;
-  }
   .artikel-row {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -923,6 +837,9 @@ input {
   }
 }
 @media (max-width: 760px) {
+  .nav-toggle-input {
+    display: block;
+  }
   .nav-toggle {
     display: flex;
   }
@@ -939,7 +856,7 @@ input {
     padding: 12px 24px 18px;
     display: none;
   }
-  .nav-menu.open {
+  .nav-toggle-input:checked ~ .nav-menu {
     display: flex;
   }
   .nav-link {
@@ -952,16 +869,11 @@ input {
   .cover-inner {
     padding-block: 4rem 2.6rem;
   }
-  .stat-row {
-    grid-template-columns: 1fr;
-  }
 }
 @media (max-width: 480px) {
   .container {
     padding-inline: 18px;
   }
-  /* Kartu formulir tetap punya gutter seperti halaman lain,
-     bukan menempel ke tepi layar ponsel. */
   .form-card {
     padding: 1.4rem;
     max-width: none;
@@ -980,8 +892,6 @@ input {
     padding-inline: 18px;
   }
 }
-
-/* --- Hormati preferensi gerak berkurang --- */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -997,5 +907,6 @@ input {
     opacity: 1;
     filter: none;
     transform: none;
+    animation: none;
   }
 }
